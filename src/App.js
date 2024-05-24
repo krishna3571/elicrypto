@@ -19,7 +19,7 @@ export default function App() {
           headers: {
             'Origin': 'https://elicrypto.vercel.app',
             'X-Requested-With': 'XMLHttpRequest',
-            'User-Agent': 'Mobile' // Add User-Agent header indicating a mobile device
+            'User-Agent': 'Mozilla/ 5.0(Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari / 537.36' // Add User-Agent header indicating a mobile device
           }
         });
         setBlogs(response.data);
