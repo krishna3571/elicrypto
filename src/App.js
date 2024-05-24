@@ -35,10 +35,6 @@ export default function App() {
     navigate(`/play?gname=${encodedGname}`, { state: item });
   };
 
-  // useEffect(() => {
-  //   (window.adsbygoogle = window.adsbygoogle || []).push({});
-  // }, []);
-
   return (
     <>
       <Header />
@@ -57,8 +53,6 @@ export default function App() {
           </div>
         </div>
       </header>
-
-
       <Footer />
     </>
   );
