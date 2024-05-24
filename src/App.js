@@ -53,7 +53,7 @@ export default function App() {
           </div>
         </div>
       </header>
-      <h1>sdbfisuj</h1>
+      <h1 style={{ color: 'white' }}>sdbfisuj</h1>
       <h1>sdbfisuj</h1>
       <h1>sdbfisuj</h1>
       <h1>sdbfisuj</h1>
