@@ -13,13 +13,21 @@ export default function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('https://cors-anywhere.herokuapp.com/https://cloudapis.xyz/infinity/QurekaModule/NewAtmegameLink.json')
-      .then((response) => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://cors-anywhere.herokuapp.com/https://cloudapis.xyz/infinity/QurekaModule/NewAtmegameLink.json', {
+          headers: {
+            'Origin': 'elicrypto.vercel.app',
+            'X-Requested-With': 'XMLHttpRequest'
+          }
+        });
         setBlogs(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   const handleClickImg = (item) => {
@@ -27,9 +35,15 @@ export default function App() {
     navigate(`/play?gname=${encodedGname}`, { state: item });
   };
 
-  // useEffect(() => {
-  //   (window.adsbygoogle = window.adsbygoogle || []).push({});
-  // }, []);
+  useEffect(() => {
+    if (window.adsbygoogle) {
+      try {
+        window.adsbygoogle.push({});
+      } catch (e) {
+        console.error('Adsbygoogle error: ', e.message);
+      }
+    }
+  }, []);
 
   return (
     <>
