@@ -27,6 +27,10 @@ export default function App() {
     navigate(`/play?gname=${encodedGname}`, { state: item });
   };
 
+  useEffect(() => {
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+  }, []);
+
   return (
     <>
 
@@ -50,6 +54,12 @@ export default function App() {
           </div>
         </div>
       </header>
+
+      <ins className='adsbygoogle'
+        style={{ display: 'block' }}
+        data-ad-client='ca-pub-12121212'
+        data-ad-slot='12121212'
+        data-ad-format='auto' />
       <Footer />
     </>
   );
