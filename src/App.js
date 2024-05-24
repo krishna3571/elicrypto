@@ -18,7 +18,8 @@ export default function App() {
         const response = await axios.get('https://cors-anywhere.herokuapp.com/https://cloudapis.xyz/infinity/QurekaModule/NewAtmegameLink.json', {
           headers: {
             'Origin': 'elicrypto.vercel.app',
-            'X-Requested-With': 'XMLHttpRequest'
+            'X-Requested-With': 'XMLHttpRequest',
+            'Content-Type': 'application/json'
           }
         });
         setBlogs(response.data);
