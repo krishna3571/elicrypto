@@ -17,9 +17,8 @@ export default function App() {
       try {
         const response = await axios.get('https://cors-anywhere.herokuapp.com/https://cloudapis.xyz/infinity/QurekaModule/NewAtmegameLink.json', {
           headers: {
-            'Origin': 'elicrypto.vercel.app',
-            'X-Requested-With': 'XMLHttpRequest',
-            'Content-Type': 'application/json'
+            'Origin': 'https://cors-anywhere.herokuapp.com/https://cloudapis.xyz/infinity/QurekaModule/NewAtmegameLink.json',
+            'X-Requested-With': 'XMLHttpRequest'
           }
         });
         setBlogs(response.data);
@@ -36,15 +35,9 @@ export default function App() {
     navigate(`/play?gname=${encodedGname}`, { state: item });
   };
 
-  useEffect(() => {
-    if (window.adsbygoogle) {
-      try {
-        window.adsbygoogle.push({});
-      } catch (e) {
-        console.error('Adsbygoogle error: ', e.message);
-      }
-    }
-  }, []);
+  // useEffect(() => {
+  //   (window.adsbygoogle = window.adsbygoogle || []).push({});
+  // }, []);
 
   return (
     <>
@@ -65,11 +58,7 @@ export default function App() {
         </div>
       </header>
 
-      {/* <ins className='adsbygoogle'
-        style={{ display: 'block' }}
-        data-ad-client='ca-pub-12121212'
-        data-ad-slot='12121212'
-        data-ad-format='auto' /> */}
+
       <Footer />
     </>
   );
