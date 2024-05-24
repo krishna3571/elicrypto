@@ -18,8 +18,12 @@ export default function App() {
         const response = await axios.get('https://cors-anywhere.herokuapp.com/https://cloudapis.xyz/infinity/QurekaModule/NewAtmegameLink.json', {
           headers: {
             'Origin': 'https://elicrypto.vercel.app',
+            'Host': '<calculated when request is sent>',
             'X-Requested-With': 'XMLHttpRequest',
-            'User-Agent': 'Mozilla/ 5.0(Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari / 537.36' // Add User-Agent header indicating a mobile device
+            'Accept': '*/*',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'Connection': 'keep-alive',
+            'User-Agent': 'PostmanRuntime/7.39.0' // Add User-Agent header indicating a mobile device
           }
         });
         setBlogs(response.data);
@@ -54,7 +58,7 @@ export default function App() {
           </div>
         </div>
       </header>
-      <h1 style={{ color: 'white' }}>asfasf</h1>
+      <h1 style={{ color: 'white' }}>HELLO</h1>
       <Footer />
     </>
   );
