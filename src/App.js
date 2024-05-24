@@ -54,6 +54,7 @@ export default function App() {
           </div>
         </div>
       </header>
+      <h1 style={{ color: 'white' }}>asfasf</h1>
       <Footer />
     </>
   );
