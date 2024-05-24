@@ -27,39 +27,34 @@ export default function App() {
     navigate(`/play?gname=${encodedGname}`, { state: item });
   };
 
-  useEffect(() => {
-    (window.adsbygoogle = window.adsbygoogle || []).push({});
-  }, []);
+  // useEffect(() => {
+  //   (window.adsbygoogle = window.adsbygoogle || []).push({});
+  // }, []);
 
   return (
     <>
-
-
       <Header />
       <header>
         <div className="container">
           <div className='row mt-5'>
             {blogs.map((item) => (
-              <>
-
-                <div key={item.id} className='col-xs-4 col-sm-6 col-md-4 col-lg-2 col-6' style={{ display: 'flex', justifyContent: 'center', marginBottom: '30px' }}>
-                  <div className="MainHVR d-flex justfy-content-center align-items-center" onClick={() => handleClickImg(item)}>
-                    <div className="DataName">{item.gname}</div>
-                    <div className="databg"></div>
-                    <img src={item.thumbnail} alt="Game Images" style={{ borderRadius: '70px', marginTop: '30px' }} draggable="false" className="img-fluid HvrIMG mx-auto image" />
-                  </div>
+              <div key={item.id} className='col-xs-4 col-sm-6 col-md-4 col-lg-2 col-6' style={{ display: 'flex', justifyContent: 'center', marginBottom: '30px' }}>
+                <div className="MainHVR d-flex justify-content-center align-items-center" onClick={() => handleClickImg(item)}>
+                  <div className="DataName">{item.gname}</div>
+                  <div className="databg"></div>
+                  <img src={item.thumbnail} alt="Game Images" style={{ borderRadius: '70px', marginTop: '30px' }} draggable="false" className="img-fluid HvrIMG mx-auto image" />
                 </div>
-              </>
+              </div>
             ))}
           </div>
         </div>
       </header>
 
-      <ins className='adsbygoogle'
+      {/* <ins className='adsbygoogle'
         style={{ display: 'block' }}
         data-ad-client='ca-pub-12121212'
         data-ad-slot='12121212'
-        data-ad-format='auto' />
+        data-ad-format='auto' /> */}
       <Footer />
     </>
   );
