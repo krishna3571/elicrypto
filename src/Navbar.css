@@ -1,0 +1,35 @@
+@media screen and (max-width:993px) {
+    .okok {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 15px;
+    }
+
+    .ok {
+        padding-bottom: 10px;
+    }
+
+    .fun {
+        padding: 5px 20px;
+    }
+}
+
+@media screen and (max-width:490px) {
+    /* .fun {
+        justify-content: center;
+    } */
+
+    img {
+        width: 200px !important;
+    }
+}
+
+.okok {
+    display: flex;
+}
+
+.fun {
+    color: white;
+    padding: 10px 50px;
+}
